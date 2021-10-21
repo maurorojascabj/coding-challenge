@@ -1,6 +1,15 @@
+:root{
+  --primaryColor: #ffffff;
+  --secondaryColor:#000000;
+  --textColor: #616161;
+  --backgroundBtnFilter: #ededed;
+  --spanBtnFilter: #a3a3a3;
+  --lines: #d9d9d9;
+  --btnRedeem: #ff8800;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: SourceSansPro-Bold, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
