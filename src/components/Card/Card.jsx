@@ -71,7 +71,7 @@ const Card = ({productId, imageUrl, category, name, cost, currentPoints, setCurr
                     {
                         currentPoints < cost &&
                             <div className={classes.info}>
-                                <span className={classes.titleInfo}>Need you: {cost - currentPoints}</span>
+                                <span className={classes.titleInfo}>You need: {cost - currentPoints}</span>
                                 <img className={classes.imgInfo} src={iconMoney} alt="" />
                             </div>
                     }
