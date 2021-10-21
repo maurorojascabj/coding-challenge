@@ -1,0 +1,20 @@
+.containerUser{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#ededed;
+    border-radius:100px;
+    width:auto;
+    height:40px;
+    padding: 0 10px;
+}
+.containerUser span{
+    font-size: 15px;
+}
+.containerPoints{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 5px;
+    color: var(--textColor);
+}
