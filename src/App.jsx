@@ -1,10 +1,6 @@
 import React, {useState, useEffect} from 'react';
 
-import Header from './components/HeaderSection/Header';
-import ItemRedeem from './components/HeaderSection/Routes/Redeem/ItemRedeem';
-import Filter from './components/Filter/Filter';
-import SubHeader from './components/SubHeader/SubHeader';
-import MainContent from './components/MainContent/MainContent';
+import { Header, ItemRedeem, Filter, SubHeader, MainContent, ItemShopList} from './components'
 
 import classes from './components/HeaderSection/Header.module.css'
 
@@ -13,8 +9,6 @@ import {
   Switch,
   Route,
 } from 'react-router-dom'
-
-import ItemShopList from './components/HeaderSection/Routes/ShopList/ItemShopList';
 
 function App(){
 
