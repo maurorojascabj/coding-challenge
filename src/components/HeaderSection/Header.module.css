@@ -4,25 +4,52 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 80px;
+    /* height: 50px; */
+    padding: 10px 0;
     box-shadow: -2px 5px 5px 0px rgba(146,140,140,0.75);
     -webkit-box-shadow: -2px 5px 5px 0px rgba(146,140,140,0.75);
     -moz-box-shadow: -2px 5px 5px 0px rgba(146,140,140,0.75);
 }
 .containerImageHeader{
     text-align: center;
-    width: 10%;
+    width: 15%;
 }
 .header{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    width: 60%;
+}
+@media (min-width:768px) and (max-width:1024px){
+    .header{
+        width: 70%;
+    }
+}
+.btnMenuResponsive{
+    display: none;
+}
+.closeBtn{
+    display: none;
+}
+.containerUser{
     width: 40%;
 }
-@media (max-width:768px) {
-    .header{
-        width: 50%;
+.optionsHeader{
+    width: 50%;
+}
+@media (min-width:768px) and (max-width:1024px){
+    .optionsHeader{
+        width: 40%;
     }
+}
+.optionsHeader .contentOptionsHeader{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+.optionsHeader .detailUser{
+    display: none;
 }
 a{
     text-decoration: none;
@@ -34,9 +61,16 @@ a{
     text-decoration: none;
     color: #616161;
 }
+.header .link button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 15px;
+    color: var(--textColor);
+}
 
-.header a:hover{
-    border-bottom: 2px solid #c2c2c2;
+.header .link button:hover{
+    border-bottom: 2px solid var(--lines);
 }
 
 @media (max-width: 480px){
@@ -44,34 +78,96 @@ a{
         font-size: 12px;
     }
 }
-  
-.buttonsHeader{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-}
 
-.btn {
-    border: inherit;
+/* Menu responsive */
+.btnMenuResponsive{
+    display: none;
+    border: none;
+    background-color: transparent;
     cursor: pointer;
+    border: 1px solid var(--lines);
+    padding: 1px 5px;
 }
-.btnHeader{
-    border-bottom: 2px solid #616161;
-    background-color: inherit;
-    margin: 0 8px;
-}
-.btnHeader span {
-    font-family:SourceSansPro-Regular;
-    font-size:16px;
-    color:#616161;
-    letter-spacing:-0.15px;
-    line-height:30px;
-    text-align:left;
-}
-.btnHeader:hover{
-    background-color: black;
-}
-.btnHeader:hover > span{
-    color: white;
+@media (max-width:768px) {
+    .btnMenuResponsive{
+        display: block;
+    }
+    .btnMenuResponsive:hover{
+        box-shadow: 0 1px 2px rgb(204, 204, 204);
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+        margin:0 20px;
+    }
+    .optionsHeader{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        height: 100%;
+        width: 40%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: var(--primaryColor);
+        border: 1px solid var(--lines);
+        border-radius:5px;
+        overflow-x: hidden;
+        transition: 0.5s;
+    }
+    .optionsHeader .contentOptionsHeader{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    }
+    .optionsHeader .detailUser{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px 0;
+        width: 100%;
+        height: auto;
+        background-color: var(--lines);
+    }
+    .optionsHeader .link{
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        font-size: 25px;
+        transition: 0.3s;
+        width: 100%;
+        height: 50px;
+        border-bottom: 1px solid var(--textColor);
+    }
+    .optionsHeader .link button{
+        color: var(--secondaryColor);
+        padding: 0;
+    }
+    .optionsHeader .link button:hover{
+        border: none;
+    }
+    .optionsHeader .link:hover{
+        background-color:var(--lines);
+    }
+    .optionsHeader .link:hover{
+        color: #f1f1f1;
+    }
+    .optionsHeader .closeBtn{
+        display: block;
+        position: absolute;
+        border: none;
+        background-color: transparent;
+        top: 0;
+        left: 10px;
+        font-size: 36px;
+        margin-right: 50px;
+        cursor: pointer;
+    }
 }
