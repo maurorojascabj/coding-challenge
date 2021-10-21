@@ -40,16 +40,18 @@ const ItemRemeew = ({historyUrl, baseToken}) => {
                                 <div className={classes.containerImage}>
                                     <img src={item.img.url} alt="" />
                                 </div>
-                                <div className={classes.containerNameProduct}>
-                                    <span>
-                                        {item.name}
-                                    </span>
-                                </div>
-                                <div className={classes.containerCostProduct}>
-                                    <img src={iconMoney} alt="" />
-                                    <span>
-                                        {item.cost}
-                                    </span>
+                                <div className={classes.containerInfoProduct}>
+                                    <div className={classes.containerNameProduct}>
+                                        <span>
+                                            {item.name}
+                                        </span>
+                                    </div>
+                                    <div className={classes.containerCostProduct}>
+                                        <img src={iconMoney} alt="" />
+                                        <span>
+                                            {item.cost}
+                                        </span>
+                                    </div>
                                 </div>
                             </li>                     
                         )

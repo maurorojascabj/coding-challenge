@@ -53,6 +53,11 @@
     align-items: center;
     width: 80%;
 }
+@media (max-width:480px) {
+    .contentShopList .detailProduct{
+        width: 70%;
+    }
+}
 .detailProduct .containerImage{
     width: auto;
     height: auto;
@@ -73,6 +78,7 @@
 @media (max-width:480px) {
     .detailProduct .containerInfoProduct{
         flex-direction: column;
+        width: 30%;
     }
     .containerImage img{
         width: 150px;
@@ -122,6 +128,11 @@
     .contentShopList .remeewButton{
         font-size:15px;
         height:38px;   
+    }
+}
+@media (max-width:480px) {
+    .contentShopList .remeewButton{
+        width: 20% ;
     }
 }
 .contentShopList .remeewButton:hover{

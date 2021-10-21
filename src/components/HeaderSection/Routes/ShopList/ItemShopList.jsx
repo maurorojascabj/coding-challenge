@@ -63,7 +63,6 @@ const ItemShopList = ({shopList, currentPoints, setCurrentPoints, redeemUrl, bas
                                                         {item.cost}
                                                     </span>
                                                 </div>
-
                                             </div>
                                         </div>
                                         <button 
