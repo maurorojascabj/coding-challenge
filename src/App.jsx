@@ -63,17 +63,8 @@ function App(){
   }
 
   const amountProducts = products.length
-  function orderProducts(){
-    switch (nameCategoryFilter) {
-      case 'Highest price':
-        return products.sort(((a,b) => b.cost - a.cost))
-      case 'Lowest price':
-        return products.sort(((a,b) => a.cost - b.cost))
-      default:
-        return products
-    }
-  }
-  const dataProducts = orderProducts()
+ 
+  const dataProducts = products
 
   /*get User */
   const getUser = async() => {
@@ -122,6 +113,9 @@ function App(){
               paginatorRight={paginatorRight}
               setPaginatorRight={setPaginatorRight}
               amountProducts={amountProducts}
+              products={products}
+              setProducts={setProducts}
+              getProducts={getProducts}
               nameCategoryFilter={nameCategoryFilter}
               setNameCategoryFilter={setNameCategoryFilter}
               disposition={disposition}
