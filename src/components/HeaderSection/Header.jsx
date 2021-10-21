@@ -42,7 +42,7 @@ const Header = ({user, pointUrl, baseToken, currentPoints, setCurrentPoints}) =>
         if (widthWindow >= 769 && wrapperRef.current !== null){
             wrapperRef.current.style.width = '60%';
         }else{
-            if (widthWindow < 769){
+            if (widthWindow < 769 && wrapperRef.current !== null){
                 wrapperRef.current.style.width = 0;
             }
         }
