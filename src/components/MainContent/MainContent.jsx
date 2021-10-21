@@ -4,7 +4,6 @@ import classes from '../MainContent/MainContent.module.css'
 
 import Card from '../Card/Card.jsx'
 
-
 const MainContent = ({data, paginatorLeft, paginatorRight, currentPoints, setCurrentPoints, disposition, user, shopList, setShopList, redeemUrl, baseToken}) => {
     const newArray = data.slice(paginatorLeft,paginatorRight)
     return (
