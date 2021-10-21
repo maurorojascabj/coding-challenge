@@ -4,7 +4,7 @@ import classes from './Category.module.css'
 
 import DataFilter from './DataFilter'
 
-const Category = ({nameCategoryFilter, setNameCategoryFilter}) => {
+const Category = ({getProducts, products, setProducts, nameCategoryFilter, setNameCategoryFilter}) => {
 
     const [titleFilter, setTitleFilter] = useState('Filter:')
     const [openDropdownFilter, setOpenDropdownFilter] = useState(false)
@@ -13,7 +13,20 @@ const Category = ({nameCategoryFilter, setNameCategoryFilter}) => {
         setOpenDropdownFilter(state)
     }
 
+    function orderProducts(value){
+        switch (value) {
+          case 'Highest price':
+            return setProducts(products.sort(((a,b) => b.cost - a.cost)))
+          case 'Lowest price':
+            return setProducts(products.sort(((a,b) => a.cost - b.cost)))
+          default:
+            getProducts()
+            return setProducts(products)
+        }
+      }
+
     const selectItem = (title) => {
+        orderProducts(title)
         setTitleFilter(title)
         setOpenDropdownFilter(false)
         setNameCategoryFilter(title)
@@ -38,7 +51,7 @@ const Category = ({nameCategoryFilter, setNameCategoryFilter}) => {
     return (
         <div className={classes.containerFilter} ref={wrapperRef}>
             <div className={classes.dropdown}>
-                <button className={classes.select} onClick={()=>openList(!openDropdownFilter)}>
+                <button className={classes.btnSelect} onClick={()=>openList(!openDropdownFilter)}>
                     {titleFilter}
                 </button>
                 {

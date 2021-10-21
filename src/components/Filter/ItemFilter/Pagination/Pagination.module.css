@@ -8,15 +8,13 @@
 }
 @media (max-width:768px) {
     .containerPagination{
-        /* width: 20%; */
         height:35px;
     }
 }
 
 @media (max-width:480px) {
     .containerPagination{
-        /* width: 15%; */
-        height:20px;
+        height:30px;
     }
 }
 
@@ -40,6 +38,6 @@
 }
 @media (max-width: 480px) {
     .containerPagination img{
-        width:20px;
+        width:30px;
     }
 }

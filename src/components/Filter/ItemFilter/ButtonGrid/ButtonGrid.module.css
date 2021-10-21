@@ -21,12 +21,16 @@
 .btnFilterClicked{
     background-color:var(--lines);
 }
-@media (max-width:480px) {
+@media (max-width:768px) {
+    .containerBtnFilter{
+        height: auto;
+    }   
     .btnFilter{
-        height: 20px;
+        width: 28px;
+        height: 28px;
     }
     .btnFilter > svg{
-        width:15px;
-        height:15px;   
+        width:20px;
+        height:20px;
     }
 }

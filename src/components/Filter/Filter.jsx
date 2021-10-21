@@ -5,8 +5,8 @@ import Category from './ItemFilter/Category/Category';
 import Pagination from './ItemFilter/Pagination/Pagination';
 import ButtonGrid from './ItemFilter/ButtonGrid/ButtonGrid';
 
-const Filter = ({paginatorLeft, setPaginatorLeft, paginatorRight, setPaginatorRight, amountProducts, nameCategoryFilter,
-    setNameCategoryFilter, disposition, setDisposition}) => {
+const Filter = ({paginatorLeft, setPaginatorLeft, paginatorRight, setPaginatorRight, amountProducts, products, setProducts,
+    getProducts, nameCategoryFilter, setNameCategoryFilter, disposition, setDisposition}) => {
     return (
         <div className={classes.containerFilter}>
             <ButtonGrid
@@ -14,8 +14,11 @@ const Filter = ({paginatorLeft, setPaginatorLeft, paginatorRight, setPaginatorRi
                 setDisposition={setDisposition}
             />
             <Category
-              nameCategoryFilter={nameCategoryFilter}
-              setNameCategoryFilter={setNameCategoryFilter}
+                getProducts={getProducts}
+                products={products}
+                setProducts={setProducts}
+                nameCategoryFilter={nameCategoryFilter}
+                setNameCategoryFilter={setNameCategoryFilter}
             />
             <Pagination
                 paginatorLeft={paginatorLeft}
