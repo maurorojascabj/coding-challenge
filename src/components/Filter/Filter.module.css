@@ -1,0 +1,16 @@
+.containerFilter{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:60%;
+    height:40px;
+    margin:10px;
+    border:1px solid var(--lines);
+    padding:5px;
+}
+@media (max-width:1024px) {
+    .containerFilter{
+        width:90%;
+        padding:5px;
+    }
+}
