@@ -53,7 +53,6 @@ const Card = ({productId, imageUrl, category, name, cost, currentPoints, setCurr
                 ...shopList,
                 productSelected
         ])
-        console.log('Desde card: ', shopList)
         MySwal.fire({
             position: 'center',
             icon: 'success',
