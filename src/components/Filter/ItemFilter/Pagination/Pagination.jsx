@@ -18,7 +18,6 @@ const Pagination = ({paginatorLeft, setPaginatorLeft, paginatorRight, setPaginat
         return
     }
     const handlerPaginatorRight = (left, right) => {
-        console.log('Right: ', right)
         if(right <= amountProducts){
             let range = right - left
             left = left + range
