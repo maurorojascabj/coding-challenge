@@ -7,10 +7,15 @@ import iconMoney from '../../../../images/icons/coin.svg'
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
 
-const ItemShopList = ({shopList, currentPoints, setCurrentPoints, redeemUrl, baseToken,}) => {
+const ItemShopList = ({shopList, setShopList, currentPoints, setCurrentPoints, redeemUrl, baseToken,}) => {
 
     const MySwal = withReactContent(Swal)
 
+    const deleteProductExchanged = (shopList, product) => {
+        const newShopList = shopList.filter( item => item.productId !== product.productId)
+        setShopList(newShopList)
+    }
+    
     const addRedeem = async(product) => {
         try {
             const response = await fetch(redeemUrl, {
@@ -23,6 +28,7 @@ const ItemShopList = ({shopList, currentPoints, setCurrentPoints, redeemUrl, bas
                     'Content-Type': 'application/json',
                 })
             })
+            deleteProductExchanged(shopList, product)
             const data = await response.json()
             setCurrentPoints(currentPoints - product.cost)
             MySwal.fire({

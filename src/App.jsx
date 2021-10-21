@@ -138,6 +138,7 @@ function App(){
           <Route path="/shops">
               <ItemShopList
                 shopList={shopList}
+                setShopList={setShopList}
                 currentPoints={currentPoints}
                 setCurrentPoints={setCurrentPoints}
                 redeemUrl={redeemUrl}
